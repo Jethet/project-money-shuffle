@@ -1,14 +1,23 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
-  );
+import CreateExpenseCategory from "./components/CreateExpenseCategory";
+import CategoryOverview from "./components/CategoryOverview";
+
+
+class App extends React.Component {
+  // information that the component manages that affect what the component displays
+  state = {};
+
+  render() {
+    return (
+      <div className="App">
+        <CategoryOverview />
+
+        <CreateExpenseCategory />
+      </div>
+    );
+  }
 }
 
 export default App;
