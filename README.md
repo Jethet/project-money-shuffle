@@ -43,12 +43,19 @@ The homepage has the categories of expenses and the user can click and go to the
 ## Minimal Viable Product (MVP)
 
 *1. Page for sign up*
+
 *2. Page for log in*
+
 3. Home page with option to generate daily and weekly overviews per category of expenses.
+
 4. Option on home page to set alerts to be activated when a specific percentage of the budget has been spent.
+
 5. Individual pages for each expenditure category with functionality to create, edit and delete budgets, and manage expenses (create, edit and delete expenses).
+
 *7. Option to log out*
+
 *8. Page with credits for pictures and font used for the app*
+
 
 *Items in italics are part of the backlog*
 
