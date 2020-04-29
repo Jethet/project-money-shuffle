@@ -1,17 +1,11 @@
 import React from "react";
 
 class CreateExpenseCategory extends React.Component {
-  formData
-   constructor(props) {
-     super(props)
-
-     this.state = {
-      categoryName: "",
-      amount: null,
-      date: "",
-    };
-   }
-  
+  state = {
+    categoryName: "",
+    amount: 0,
+    date: "",
+  };
 
   handleChange = (e) => {
     let { name, value } = e.target;
@@ -21,51 +15,32 @@ class CreateExpenseCategory extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(`Information submitted: ${this.categoryName} ${this.amount}`);
-    this.setState ({
+    let newExpenseCategory = this.state;
+    console.log(newExpenseCategory);
+
+    this.setState({
       categoryName: "",
-      amount: null,
-      date: ""
-    })
+      amount: 0,
+      date: "",
+    });
   };
-
-  componentDidMount() {
-    this.formData = JSON.parse(localStorage.getItem('form'))
-
-    if(localStorage.getItem('form')) {
-      this.setState({
-        categoryName: this.formData.categoryName,
-        amount: this.formData.amount,
-        date: this.formData.date
-      })
-    } else {
-      this.setState ({
-        categoryName: '',
-        amount: null,
-        date: ''
-      })
-    }
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    localStorage.setItem('form', JSON.stringify(nextState))
-  }
 
   render() {
     return (
-      <div className="">
+      <div className="new-category-form">
         <div className="container">
           <div id="category-header">
             <h3>Create a new category of expenses</h3>
           </div>
-          <div >
+          <div>
             <form onSubmit={this.handleSubmit}>
               <div className="form-group">
                 <label className="category-form-label">Category name</label>
                 <input
                   className="form-control"
-                  name="category"
                   type="text"
-                  value={this.state.categoryName}
+                  name="category"
+                  // value={this.state.categoryName}
                   onChange={this.handleChange}
                 />
               </div>
@@ -89,7 +64,9 @@ class CreateExpenseCategory extends React.Component {
                   onChange={this.handleChange}
                 />
               </div>
-              <button type="submit" className="btn btn-primary btn-block">Submit</button>
+              <button type="submit" className="btn btn-primary btn-block">
+                Submit
+              </button>
             </form>
           </div>
         </div>

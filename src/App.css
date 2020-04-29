@@ -21,6 +21,12 @@
   color: #61dafb;
 }
 
+.new-category-form {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid black;
+}
+
 .category-form-list {
   list-style: none;
 }
