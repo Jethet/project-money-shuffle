@@ -1,7 +1,21 @@
 import React from "react";
 
-function CreateCategory(props) {
+
+class CreateCategory extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      categoryName: "",
+      totalBudget: 0,
+      amountSpent: 0,
+      remainingBudget: 0,
+      budgetDate: null,
+    };
+  }
+
 // How add new Category to an array of existing category objects?
+
+  render() {
   return (
     <div>
       <div className="category-form">
@@ -30,11 +44,11 @@ function CreateCategory(props) {
                 />
               </div>
               <div className="form-group">
-                <label className="category-form-label">Date:</label>
+                <label className="category-form-label">Date created:</label>
                 <input className="form-control" type="date" name="date" />
               </div>
-              <button type="submit" className="btn btn-block" style={{backgroundColor: "lightblue"}}>
-                Submit
+              <button type="submit" className="btn" style={{backgroundColor: "lightblue"}}>
+                Create new
               </button>
             </form>
           </div>
@@ -42,6 +56,7 @@ function CreateCategory(props) {
       </div>
     </div>
   );
+}
 }
 
 export default CreateCategory;

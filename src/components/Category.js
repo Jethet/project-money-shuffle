@@ -1,43 +1,29 @@
 import React from "react";
-import CreateCategory from "./CreateCategory";
 
-class Category extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      categoryName: "Test",
-      totalBudget: 0,
-      amountSpent: 0,
-      remainingBudget: 0,
-      budgetDate: "date",
-    };
-  }
+function Category(props) {
 
-  render() {
     return (
       <div>
         <div className="category-container">
           <div id="category-header">
-            <h3>Category name: {this.state.categoryName}</h3>
+            <h4>{props.category.categoryName}</h4>
           </div>
           <div id="category-header">
-            <h3>Total budget: {this.state.totalBudget}</h3>
+            <h6>Total budget: {props.category.totalBudget}</h6>
           </div>
           <div id="category-header">
-            <h3>Total amount spent: {this.state.amountSpent}</h3>
+            <h6>Total amount spent: {props.category.amountSpent}</h6>
           </div>
           <div id="category-header">
-            <h3>Total remaining budget: {this.state.remainingBudget}</h3>
+            <h6>Total remaining budget: {props.category.remainingBudget}</h6>
           </div>
-          <div id="category-header">
-            <h3>Budget date: {this.state.budgetDate}</h3>
-          </div>
+          <button className="btn" style={{backgroundColor: "lightblue"}}>View category</button>
           <br/>
           <hr/>
         </div>
       </div>
     );
   }
-}
+
 
 export default Category;
