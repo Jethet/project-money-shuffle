@@ -1,20 +1,23 @@
 import React from "react";
 import "./App.css";
 
-import CreateExpenseCategory from "./components/CreateExpenseCategory";
+import CreateCategory from "./components/CreateCategory";
 import CategoryOverview from "./components/CategoryOverview";
+import Footer from "./components/Footer"
+import Navbar from "./components/Navbar"
 
 
 class App extends React.Component {
-  // information that the component manages that affect what the component displays
-  state = {};
-
+  
   render() {
     return (
       <div className="App">
-        <CategoryOverview />
 
-        <CreateExpenseCategory />
+        <Navbar />
+        <CategoryOverview />
+        <CreateCategory />
+        <Footer />
+
       </div>
     );
   }

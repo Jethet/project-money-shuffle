@@ -21,9 +21,10 @@
   color: #61dafb;
 }
 
-.new-category-form {
-  margin-top: 40px;
-  padding-top: 10px;
+.category-form {
+  width: 50%;
+  margin: 50px;
+  padding-top: 20px;
   border-top: 1px solid black;
 }
 
