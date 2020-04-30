@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import categories from "./categories.json"
 
 import CreateCategory from "./components/CreateCategory";
 import CategoryOverview from "./components/CategoryOverview";
@@ -9,6 +10,7 @@ import Navbar from "./components/Navbar"
 
 class App extends React.Component {
   
+
   render() {
     return (
       <div className="App">

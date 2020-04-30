@@ -1,25 +1,15 @@
 import React from "react";
+
 import Category from "./Category";
 
-class CategoryOverview extends React.Component {
-  constructor(props) {
-    super(props);
+// Map over existing instances of Category to show them??
 
-    // this.state = {
-    //   categoryName: "",
-    //   amount: 0,
-    //   date: "",
-    // };
-  }
-
-  render() {
-
-    return (
-      <div>
-        <Category />
-      </div>
-    );
-  }
+function CategoryOverview() {
+  return (
+    <div>
+      <Category />
+    </div>
+  );
 }
 
 export default CategoryOverview;
