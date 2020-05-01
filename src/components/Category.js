@@ -17,6 +17,9 @@ function Category(props) {
           <div id="category-header">
             <h6>Total remaining budget: {props.category.remainingBudget}</h6>
           </div>
+          <div id="category-header">
+            <h6>Budget created on: {props.category.budgetDate}</h6>
+          </div>
           <button className="btn" style={{backgroundColor: "lightblue"}}>View category</button>
           <br/>
           <hr/>
