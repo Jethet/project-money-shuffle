@@ -9,6 +9,11 @@ class CreateCategory extends React.Component {
     budgetDate: "",
   };
 
+  handleChange = (e) => {
+    let { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
+
   handleSubmit = (e) => {
     e.preventDefault();
     let newCategory = this.state;
@@ -17,15 +22,13 @@ class CreateCategory extends React.Component {
     this.setState = {
       categoryName: "",
       totalBudget: 0,
+      amountSpent: 0,
+      remainingBudget: 0,
       budgetDate: "",
     };
   };
 
-  handleChange = (e) => {
-    let { name, value } = e.target;
-    this.setState({ [name]: value });
-  };
-
+  
   // How add new Category to an array of existing category objects?
 
   render() {
