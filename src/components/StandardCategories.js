@@ -1,16 +1,18 @@
 import React from 'react'
-import categoriesData from "./categories.json";
-import Category from "./Category"
 
-function StandardCategories() {
-    
-  const fixedCategories = categoriesData.map((item) => (
-    <Category key={item.id} category={item} />
-  ));
+function StandardCategories(props) {
+  
+  const mappedCategories = props.fixedCategories.map((category) => {
+    return mappedCategories
+  })
 
   return (
     <div>
-    {fixedCategories}
+      <h6>Category name: {this.mappedCategories.name}</h6>
+      <h6>Total budget: {this.mappedCategories.totalBudget}</h6>
+      <h6>Total amount spent: {this.mappedCategories.amountSpent}</h6>
+      <h6>Total remaining budget: {this.mappedCategories.remainingBudget}</h6>
+      <h6>Budget created on: {this.mappedCategories.budgetDate}</h6>
     </div>
   )
 }

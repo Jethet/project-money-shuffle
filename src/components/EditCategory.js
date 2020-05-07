@@ -1,6 +1,6 @@
 import React from "react";
 
-class Category extends React.Component {
+class EditCategory extends React.Component {
   state = {
     categoryName: '',
     totalBudget: null,
@@ -38,4 +38,4 @@ class Category extends React.Component {
   }
 }
 
-export default Category;
+export default EditCategory;
