@@ -1,24 +1,33 @@
 import React from "react";
 
-function Category(props) {
+class Category extends React.Component {
+  state = {
+    categoryName: '',
+    totalBudget: null,
+    amountSpent: null,
+    remainingBudget: null,
+    budgetDate: '',
+  };
+
+  render(){
 
     return (
       <div>
         <div className="category-container">
           <div id="category-header">
-            <h4>{props.category.categoryName}</h4>
+            <h4>{this.categoryName}</h4>
           </div>
           <div id="category-header">
-            <h6>Total budget: {props.category.totalBudget}</h6>
+            <h6>Total budget: {this.state.totalBudget}</h6>
           </div>
           <div id="category-header">
-            <h6>Total amount spent: {props.category.amountSpent}</h6>
+            <h6>Total amount spent: {this.state.amountSpent}</h6>
           </div>
           <div id="category-header">
-            <h6>Total remaining budget: {props.category.remainingBudget}</h6>
+            <h6>Total remaining budget: {this.state.remainingBudget}</h6>
           </div>
           <div id="category-header">
-            <h6>Budget created on: {props.category.budgetDate}</h6>
+            <h6>Budget created on: {this.state.budgetDate}</h6>
           </div>
           <button className="btn" style={{backgroundColor: "lightblue"}}>View category</button>
           <br/>
@@ -27,6 +36,6 @@ function Category(props) {
       </div>
     );
   }
-
+}
 
 export default Category;

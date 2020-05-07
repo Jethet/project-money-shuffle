@@ -3,7 +3,7 @@ import "./App.css";
 
 import CreateCategory from "./components/CreateCategory";
 import CategoryOverview from "./components/CategoryOverview";
-import CategoryData from "./components/CategoryData"
+import StandardCategories from "./components/StandardCategories"
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 
@@ -18,7 +18,7 @@ class App extends React.Component {
         <Navbar />
         <CategoryOverview />
         <CreateCategory />
-        <CategoryData />
+        <StandardCategories />
         <Footer />
 
       </div>

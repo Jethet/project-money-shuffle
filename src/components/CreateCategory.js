@@ -42,26 +42,50 @@ class CreateCategory extends React.Component {
             <div>
               <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
-                  <label className="category-form-label">Name of Category</label>
+                  <label className="category-form-label">Name of category:</label>
                   <input
                     className="form-control"
                     type="text"
                     placeholder="Enter name of category"
                     autoComplete="off"
                     name="category"
-                    value={this.state.value}
+                    value={this.state.categoryName}
                     onChange={this.handleChange}
                   />
                 </div>
                 <div className="form-group">
-                  <label className="category-form-label">Total budget amount</label>
+                  <label className="category-form-label">Total budget amount:</label>
                   <input
                     className="form-control"
                     type="number"
                     placeholder="Enter total amount"
                     autoComplete="off"
                     name="budget"
-                    value={this.state.value}
+                    value={this.state.totalBudget}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <label className="category-form-label">Total amount spent:</label>
+                  <input
+                    className="form-control"
+                    type="number"
+                    placeholder="0"
+                    autoComplete="off"
+                    name="budget"
+                    value={this.state.amountSpent}
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="form-group">
+                  <label className="category-form-label">Total remaining budget:</label>
+                  <input
+                    className="form-control"
+                    type="number"
+                    placeholder="0"
+                    autoComplete="off"
+                    name="budget"
+                    value={this.state.remainingBudget}
                     onChange={this.handleChange}
                   />
                 </div>
@@ -71,7 +95,7 @@ class CreateCategory extends React.Component {
                     className="form-control"
                     type="date"
                     name="date"
-                    value={this.state.value}
+                    value={this.state.budgetDate}
                     onChange={this.handleChange}
                   />
                 </div>
