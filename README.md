@@ -49,9 +49,10 @@ The homepage has the categories of expenses and the user can click and go to the
 
 
 *Backlog*
-*Page for sign up*
-*Page for log in*
-*Option to log out*
+
+- *Page for sign up*
+- *Page for log in*
+- *Option to log out*
 
 
 <br>
