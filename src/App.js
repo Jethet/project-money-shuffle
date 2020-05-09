@@ -1,14 +1,15 @@
 import React from "react";
 import "./App.css";
 
-import CreateCategory from "./components/CreateCategory";
+// import CreateCategory from "./components/CreateCategory";
 import CategoryOverview from "./components/CategoryOverview";
+import StandardCategories from "./components/StandardCategories"
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 
 
 class App extends React.Component {
-  s
+  
 
   render() {
     return (
@@ -16,7 +17,8 @@ class App extends React.Component {
 
         <Navbar />
         <CategoryOverview />
-        <CreateCategory />
+        <StandardCategories />
+        {/* <CreateCategory /> */}
         <Footer />
 
       </div>

@@ -47,6 +47,7 @@ The homepage has the categories of expenses and the user can click and go to the
 3. Individual pages for each expenditure category with functionality to create, edit and delete budgets, and manage expenses (create, edit and delete expenses).
 4. Page with credits for pictures and font used for the app
 
+<br>
 
 *Backlog*
 

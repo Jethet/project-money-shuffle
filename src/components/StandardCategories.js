@@ -1,20 +1,31 @@
-import React from 'react'
+import React from "react";
+import categoriesData from "../categoriesData";
 
-function StandardCategories(props) {
-  
-  const mappedCategories = props.fixedCategories.map((category) => {
-    return mappedCategories
-  })
+class StandardCategories extends React.Component {
+  state = {
+    standardCategories: [],
+  };
 
-  return (
-    <div>
-      <h6>Category name: {this.mappedCategories.name}</h6>
-      <h6>Total budget: {this.mappedCategories.totalBudget}</h6>
-      <h6>Total amount spent: {this.mappedCategories.amountSpent}</h6>
-      <h6>Total remaining budget: {this.mappedCategories.remainingBudget}</h6>
-      <h6>Budget created on: {this.mappedCategories.budgetDate}</h6>
-    </div>
-  )
+  componentDidMount() {}
+
+  showStandardCategories = () => {
+    this.standardCategories = JSON.parse(categoriesData);
+    console.log(this.standardCategories);
+    
+    // standardCategories.map((item) => {
+    //   return (
+
+    //   )
+    // })
+  };
+
+  render() {
+    return (
+      <div>
+        <br />
+      </div>
+    );
+  }
 }
 
-export default StandardCategories
+export default StandardCategories;

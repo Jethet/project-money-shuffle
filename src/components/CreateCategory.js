@@ -4,14 +4,16 @@ import React from "react";
 // How add new Category to an array of existing category objects?
 
 class CreateCategory extends React.Component {
-    state = {
+  constructor(props) {
+    super(props);
+    this.state = {
       categoryName: "",
-      totalBudget: 0,
-      amountSpent: 0,
-      remainingBudget: 0,
+      totalBudget: "",
+      amountSpent: "",
+      remainingBudget: "",
       budgetDate: "",
     };
-
+  }
 
   handleChange = (e) => {
     let { name, value } = e.target;
@@ -20,8 +22,21 @@ class CreateCategory extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    let newCategory = this.state;
-    console.log(newCategory);
+    const {
+      categoryName,
+      totalBudget,
+      amountSpent,
+      remainingBudget,
+      budgetDate,
+    } = this.state;
+
+    let nameCheck = localStorage.getItem(categoryName);
+    if (nameCheck === null) {
+      // state is an object and can be stringified
+      localStorage.setItem(categoryName, JSON.stringify(this.state));
+    } else {
+      alert("This category name already exists");
+    }
 
     this.setState({
       categoryName: "",
@@ -49,6 +64,7 @@ class CreateCategory extends React.Component {
                       className="form-control"
                       type="text"
                       placeholder="Enter name of category"
+                      required
                       autoComplete="off"
                       name="categoryName"
                       value={this.state.categoryName}
@@ -63,6 +79,7 @@ class CreateCategory extends React.Component {
                       className="form-control"
                       type="number"
                       placeholder="Enter total amount"
+                      required
                       autoComplete="off"
                       name="totalBudget"
                       value={this.state.totalBudget}
@@ -105,6 +122,7 @@ class CreateCategory extends React.Component {
                       className="form-control"
                       type="date"
                       name="budgetDate"
+                      required
                       value={this.state.budgetDate}
                       onChange={this.handleChange}
                     />
