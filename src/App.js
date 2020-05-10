@@ -9,15 +9,26 @@ import Navbar from "./components/Navbar"
 
 
 class App extends React.Component {
-  
+  constructor(props) {
+    super(props);
+    this.state = {
+      categoryName: "",
+      totalBudget: "",
+      amountSpent: "",
+      remainingBudget: "",
+      budgetDate: "",
+    };
+  }
 
   render() {
     return (
       <div className="App">
 
         <Navbar />
-        <CategoryOverview />
         <StandardCategories />
+        <CategoryOverview />
+        
+        
         {/* <CreateCategory /> */}
         <Footer />
 

@@ -58,7 +58,7 @@ class CreateCategory extends React.Component {
             <div>
               <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
-                  <label className="category-form-label">
+                  <label for="categoryName" className="category-form-label">
                     Name of category:
                     <input
                       className="form-control"
@@ -73,7 +73,7 @@ class CreateCategory extends React.Component {
                   </label>
                 </div>
                 <div className="form-group">
-                  <label className="category-form-label">
+                  <label for="totalBudget" className="category-form-label">
                     Total budget amount:
                     <input
                       className="form-control"
@@ -88,7 +88,7 @@ class CreateCategory extends React.Component {
                   </label>
                 </div>
                 <div className="form-group">
-                  <label className="category-form-label">
+                  <label for="amountSpent" className="category-form-label">
                     Total amount spent:
                     <input
                       className="form-control"
@@ -102,7 +102,7 @@ class CreateCategory extends React.Component {
                   </label>
                 </div>
                 <div className="form-group">
-                  <label className="category-form-label">
+                  <label for="remainingBudget" className="category-form-label">
                     Total remaining budget:
                     <input
                       className="form-control"
@@ -116,7 +116,7 @@ class CreateCategory extends React.Component {
                   </label>
                 </div>
                 <div className="form-group">
-                  <label className="category-form-label">
+                  <label for="budgetDate" className="category-form-label">
                     Date created:
                     <input
                       className="form-control"
@@ -133,7 +133,7 @@ class CreateCategory extends React.Component {
                   className="btn"
                   style={{ backgroundColor: "lightblue" }}
                 >
-                  Create new
+                  Create new category
                 </button>
               </form>
             </div>

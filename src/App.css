@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -19,8 +19,9 @@
 
 .App-link {
   color: #61dafb;
-}
+} */
 
+/* CreateCategory */
 .category-container {
   margin: 0 auto;
   padding-top: 20px;
@@ -31,6 +32,17 @@
   margin: 0 auto;
 }
 
-.category-form-list {
+/* StandardCategories */
+.category-items-container {
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-items {
   list-style: none;
+  padding-left: 0;
 }

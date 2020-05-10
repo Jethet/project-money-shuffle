@@ -18,8 +18,6 @@ class CategoryOverview extends React.Component {
 
     return (
       <div>
-        <h3>My Budget Categories</h3>
-        <StandardCategories />
         <CreateCategory newCategory={this.addNewCategory} />
 
       </div>
