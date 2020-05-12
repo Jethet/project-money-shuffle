@@ -1,6 +1,5 @@
 import React from "react";
 import CreateCategory from "./CreateCategory";
-import StandardCategories from "./StandardCategories"
 
 class CategoryOverview extends React.Component {
   state = {

@@ -24,10 +24,10 @@ class CreateCategory extends React.Component {
     e.preventDefault();
     const {
       categoryName,
-      totalBudget,
-      amountSpent,
-      remainingBudget,
-      budgetDate,
+      // totalBudget,
+      // amountSpent,
+      // remainingBudget,
+      // budgetDate,
     } = this.state;
 
     let nameCheck = localStorage.getItem(categoryName);
@@ -37,6 +37,8 @@ class CreateCategory extends React.Component {
     } else {
       alert("This category name already exists");
     }
+
+    // Can I use addNewCategory method from CatOverview(class needs props?constructor?)
 
     this.setState({
       categoryName: "",

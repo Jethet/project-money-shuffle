@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
 
-// import CreateCategory from "./components/CreateCategory";
+// import Category from "./components/Category";
 import CategoryOverview from "./components/CategoryOverview";
-import StandardCategories from "./components/StandardCategories"
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-
+import StandardCategories from "./components/StandardCategories";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import categoriesData from "./categoriesData.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -23,15 +23,23 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-
         <Navbar />
-        <StandardCategories />
-        <CategoryOverview />
-        
-        
-        {/* <CreateCategory /> */}
-        <Footer />
 
+        {categoriesData.map((category) => {
+          return (
+            <StandardCategories
+              key={category.categoryName}
+              categoryName={category.categoryName}
+              totalBudget={category.totalBudget}
+              amountSpent={category.amountSpent}
+              remainingBudget={category.remainingBudget}
+              budgetDate={category.budgetDate}
+            />
+          );
+        })
+        }
+        <CategoryOverview />
+        <Footer />
       </div>
     );
   }
