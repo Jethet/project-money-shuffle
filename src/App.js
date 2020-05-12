@@ -29,11 +29,11 @@ class App extends React.Component {
           return (
             <StandardCategories
               key={category.categoryName}
-              categoryName={category.categoryName}
-              totalBudget={category.totalBudget}
-              amountSpent={category.amountSpent}
-              remainingBudget={category.remainingBudget}
-              budgetDate={category.budgetDate}
+              category={category}
+              // totalBudget={category.totalBudget}
+              // amountSpent={category.amountSpent}
+              // remainingBudget={category.remainingBudget}
+              // budgetDate={category.budgetDate}
             />
           );
         })

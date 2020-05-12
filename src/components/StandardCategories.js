@@ -6,12 +6,12 @@ function StandardCategories(props) {
       <div className="category-items-container">
         <ul className="category-items">
           <h6>
-            Category: {props.categoryName}
+            Category: {props.category.categoryName}
           </h6>
-          <li>Total budget amount: {props.totalBudget}</li>
-          <li>Total amount spent: {props.amountSpent}</li>
-          <li>Total remaining budget: {props.remainingBudget}</li>
-          <li>Budget created on: {props.budgetDate}</li>
+          <li>Total budget amount: {props.category.totalBudget}</li>
+          <li>Total amount spent: {props.category.amountSpent}</li>
+          <li>Total remaining budget: {props.category.remainingBudget}</li>
+          <li>Budget created on: {props.category.budgetDate}</li>
           <button
               type="submit"
               className="btn btn-sm btn-outline-primary py-0"
