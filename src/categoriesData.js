@@ -2,45 +2,45 @@
   const categoriesData = [
     {
     categoryName: "Food & Drink",
-    totalBudget: 600,
-    amountSpent: 380,
+    totalBudget: 0,
+    amountSpent: 0,
     remainingBudget: 0,
-    budgetDate: "Jan 1 2020"
+    budgetDate: ""
   },
   {
     categoryName: "Housing",
-    totalBudget: 750,
-    amountSpent: 700,
+    totalBudget: 0,
+    amountSpent: 0,
     remainingBudget: 0,
-    budgetDate: "Jan 1 2020"
+    budgetDate: ""
   },
   {
     categoryName: "Clothing",
-    totalBudget: 150,
-    amountSpent: 50,
+    totalBudget: 0,
+    amountSpent: 0,
     remainingBudget: 0,
-    budgetDate: "Jan 1 2020"
+    budgetDate: ""
   },
   {
     "categoryName": "Leisure & fun",
-    "totalBudget": 150,
-    "amountSpent": 25,
+    "totalBudget": 0,
+    "amountSpent": 0,
     "remainingBudget": 0,
-    "budgetDate": "Jan 1 2020"
+    "budgetDate": ""
   },
   {
     categoryName: "Study",
-    totalBudget: 250,
-    amountSpent: 200,
+    totalBudget: 0,
+    amountSpent: 0,
     remainingBudget: 0,
-    budgetDate: "Jan 1 2020"
+    budgetDate: ""
   },
   {
     categoryName: "Transportation",
-    totalBudget: 80,
-    amountSpent: 20,
+    totalBudget: 0,
+    amountSpent: 0,
     remainingBudget: 0,
-    budgetDate: "Jan 1 2020"
+    budgetDate: ""
   }
 ]
 

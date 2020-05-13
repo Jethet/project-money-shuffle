@@ -3,9 +3,9 @@ import React from "react";
 class Category extends React.Component {
   state = {
     categoryName: "",
-    totalBudget: null,
-    amountSpent: null,
-    remainingBudget: null,
+    totalBudget: 0,
+    amountSpent: 0,
+    remainingBudget: 0,
     budgetDate: "",
   };
 

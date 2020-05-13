@@ -22,13 +22,7 @@ class CreateCategory extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const {
-      categoryName,
-      // totalBudget,
-      // amountSpent,
-      // remainingBudget,
-      // budgetDate,
-    } = this.state;
+    const { categoryName } = this.state;
 
     let nameCheck = localStorage.getItem(categoryName);
     if (nameCheck === null) {

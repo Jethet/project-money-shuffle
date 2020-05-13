@@ -10,13 +10,9 @@ import categoriesData from "./categoriesData.js";
 
 class App extends React.Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {
-      categoryName: "",
-      totalBudget: "",
-      amountSpent: "",
-      remainingBudget: "",
-      budgetDate: "",
+      categories: categoriesData
     };
   }
 
@@ -30,10 +26,6 @@ class App extends React.Component {
             <StandardCategories
               key={category.categoryName}
               category={category}
-              // totalBudget={category.totalBudget}
-              // amountSpent={category.amountSpent}
-              // remainingBudget={category.remainingBudget}
-              // budgetDate={category.budgetDate}
             />
           );
         })
