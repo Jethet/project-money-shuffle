@@ -1,6 +1,12 @@
 import React from "react";
-import CreateCategory from "./CreateCategory"
 
+function EditCategory(props) {
+  return (
+    <div>
+      
+    </div>
+  )
+}
 
 
 

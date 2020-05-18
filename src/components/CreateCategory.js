@@ -1,8 +1,5 @@
 import React from "react";
 
-// How to save the data that is entered in the local storage?
-// How add new Category to an array of existing category objects?
-
 class CreateCategory extends React.Component {
   constructor(props) {
     super(props);
@@ -31,8 +28,6 @@ class CreateCategory extends React.Component {
     } else {
       alert("This category name already exists");
     }
-
-    // Can I use addNewCategory method from CatOverview(class needs props?constructor?)
 
     this.setState({
       categoryName: "",

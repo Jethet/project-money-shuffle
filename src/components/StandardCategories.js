@@ -17,7 +17,7 @@ function StandardCategories(props) {
               className="btn btn-sm btn-outline-primary py-0"
               style={{ backgroundColor: "lightblue", color: "black", border: "none" }}
             >
-              View
+              View/Edit
             </button>
         </ul>
 
