@@ -1,15 +1,10 @@
 import React from "react";
+import CategoryState from "./CategoryState";
+
 
 class CreateCategory extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      categoryName: "",
-      totalBudget: "",
-      amountSpent: "",
-      remainingBudget: "",
-      budgetDate: "",
-    };
+  state = {
+    category: this.props.category
   }
 
   handleChange = (e) => {

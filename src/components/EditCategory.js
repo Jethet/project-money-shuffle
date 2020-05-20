@@ -1,13 +1,19 @@
 import React from "react";
 
-function EditCategory(props) {
+class EditCategory extends React.Component {
+  state = {
+    category: this.props.category
+  }
+
+  render() {
+    
   return (
     <div>
       
     </div>
   )
 }
-
+}
 
 
 export default EditCategory

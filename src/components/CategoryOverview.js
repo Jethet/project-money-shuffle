@@ -5,12 +5,7 @@ import categoriesData from "./../categoriesData.js";
 
 
 class CategoryOverview extends React.Component {
-  // constructor(props) {
-  //   super();
-  //   this.state = {
-  //     categories: categoriesData,
-  //   };
-  // }
+  
 
   // The new category is created and saved in local storage
   // How add the new category to the existing list of categories?

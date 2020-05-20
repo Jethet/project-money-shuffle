@@ -1,15 +1,8 @@
 import React from "react";
 
 class ViewCategory extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      categoryName: "",
-      totalBudget: "",
-      amountSpent: "",
-      remainingBudget: "",
-      budgetDate: "",
-    };
+  state = {
+    category: this.props.category
   }
 
   getCategoryFromStorage = () => {
@@ -25,6 +18,14 @@ class ViewCategory extends React.Component {
     // this.setState()    DO THIS WITH DECONSTRUCTING?
   };
 
+  handleEdit = (e) => {
+    // Can I add EditCategory here somehow?
+  };
+
+  handleDelete = (e) => {
+    // Can I add DeleteCategory here?
+  };
+
   render() {
     return (
       <div>
@@ -37,8 +38,17 @@ class ViewCategory extends React.Component {
           type="submit"
           className="btn btn-sm btn-outline-primary py-0"
           style={{ backgroundColor: "lightblue", color: "black", border: "none" }}
+          onClick={this.handleEdit}
         >
           Edit
+        </button>
+        <button
+          type="submit"
+          className="btn btn-sm btn-outline-primary py-0"
+          style={{ backgroundColor: "lightblue", color: "black", border: "none" }}
+          onClick={this.handleDelete}
+        >
+          Delete
         </button>
       </div>
     );
