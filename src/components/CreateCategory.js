@@ -1,7 +1,6 @@
 import React from "react";
 
 class CreateCategory extends React.Component {
- 
   state = {
     categoryName: "",
     totalBudget: "",
@@ -24,9 +23,9 @@ class CreateCategory extends React.Component {
       // state is an object and can be stringified
       localStorage.setItem(categoryName, JSON.stringify({ categoryName, totalBudget, amountSpent, remainingBudget, budgetDate }));
     } else {
-      alert("This category name already exists");
+      alert("This category name already exists.");
     }
-
+    // This is the created category sent to the CategoryState (component responsible for setting state)
     this.props.updateState(categoryName, totalBudget, amountSpent, remainingBudget, budgetDate)
   };
 
@@ -115,7 +114,7 @@ class CreateCategory extends React.Component {
                 <button
                   type="submit"
                   className="btn"
-                  style={{ backgroundColor: "lightblue" }}
+                  style={{ backgroundColor: "rgb(48, 192, 12)", color: "black" }}
                 >
                   Create new category
                 </button>

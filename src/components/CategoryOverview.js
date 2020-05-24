@@ -18,6 +18,7 @@ class CategoryOverview extends React.Component {
       <div>
       {categoriesData.map((category) => {
           return (
+            
             <StandardCategories
               key={category.categoryName}
               category={category}
@@ -26,8 +27,7 @@ class CategoryOverview extends React.Component {
         })
         }
         <CategoryState />
-        {/* {this.state.categoryList} */}
-        <CreateCategory />
+
       </div>
     );
   }

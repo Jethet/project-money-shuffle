@@ -5,18 +5,33 @@ import React from "react";
 
 class EditCategory extends React.Component {
   state = {
-    category: this.props.category
-  }
+    categoryName: "",
+    totalBudget: "",
+    amountSpent: "",
+    remainingBudget: "",
+    budgetDate: "",
+  };
+
+  getCategoryFromStorage = () => {
+    const { categoryName } = this.categoryName;
+    let nameCheck = localStorage.getItem(categoryName);
+    if (nameCheck === null) {
+      alert("This category name does not exist.");
+    } else {
+      const {
+        categoryName,
+        totalBudget,
+        amountSpent,
+        remainingBudget,
+        budgetDate,
+      } = JSON.parse(localStorage.getItem(categoryName));
+      console.log(categoryName, totalBudget, amountSpent, remainingBudget, budgetDate);
+    }
+  };
 
   render() {
-    
-  return (
-    <div>
-      
-    </div>
-  )
-}
+    return <div></div>;
+  }
 }
 
-
-export default EditCategory
+export default EditCategory;

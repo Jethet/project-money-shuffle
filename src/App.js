@@ -1,24 +1,27 @@
 import React from "react";
 import "./App.css";
+import { Switch, Route } from "react-router-dom";
 
-import CategoryOverview from "./components/CategoryOverview";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import CategoryOverview from "./components/CategoryOverview";
+import CreateCategory from "./components/CreateCategory";
+import EditCategory from "./components/EditCategory";
 
-class App extends React.Component {
-  
+function App() {
+  return (
+    <div className="App">
+      <Navbar />
 
-  render() {
-    return (
-      <div className="App">
-        <Navbar />
+      <Switch>
+        <Route exact path="/" component={CategoryOverview} />
+        <Route exact path="/create" component={CreateCategory} />
+        <Route exact path="/edit" component={EditCategory} />
+      </Switch>
 
-        <CategoryOverview />
-
-        <Footer />
-      </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
