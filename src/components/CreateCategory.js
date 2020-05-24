@@ -1,11 +1,14 @@
 import React from "react";
-import CategoryState from "./CategoryState";
-
 
 class CreateCategory extends React.Component {
+ 
   state = {
-    category: this.props.category
-  }
+    categoryName: "",
+    totalBudget: "",
+    amountSpent: "",
+    remainingBudget: "",
+    budgetDate: "",
+  };
 
   handleChange = (e) => {
     let { name, value } = e.target;
@@ -14,26 +17,21 @@ class CreateCategory extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { categoryName } = this.state;
+    const { categoryName, totalBudget, amountSpent, remainingBudget, budgetDate } = this.state;
 
     let nameCheck = localStorage.getItem(categoryName);
     if (nameCheck === null) {
       // state is an object and can be stringified
-      localStorage.setItem(categoryName, JSON.stringify(this.state));
+      localStorage.setItem(categoryName, JSON.stringify({ categoryName, totalBudget, amountSpent, remainingBudget, budgetDate }));
     } else {
       alert("This category name already exists");
     }
 
-    this.setState({
-      categoryName: "",
-      totalBudget: 0,
-      amountSpent: 0,
-      remainingBudget: 0,
-      budgetDate: "",
-    });
+    this.props.updateState(categoryName, totalBudget, amountSpent, remainingBudget, budgetDate)
   };
 
   render() {
+
     return (
       <div>
         <div className="category-container">
