@@ -11,7 +11,7 @@ The Money Shuffle app is created for users who would like to keep track of the m
 
 One of the definitions of *shuffle* is to rearrange, to move from one place to another. The idea behind the app is that users set a budget for specific expenses, and keep track of their expenditures. The users are presented with an overview of expenditures versus budget at the end of the day or week. This makes it easy for users to rearrange the budget in case of unexpected expenses or changes in priorities. It also helps users to be more aware of where the money is going.
 
-The central component of the app is the budget page. A number of expenditure categories are available as a starting point (these can be changed or deleted). On the home page the user can:
+The central component of the app is the overview page with the current budgets. Some standard expenditure categories are provided as a starting point (these can be changed or deleted). The user can:
 
 -  create categories of expenses, or change/delete an existing category
 -  keep an overview of the total amount of expenditure for each category
@@ -21,7 +21,7 @@ The central component of the app is the budget page. A number of expenditure cat
 The homepage has the categories of expenses and the user can click and go to the page of a category. On the category page, the user can:
 
 -  set a budget for the current category of expenses
-- check the budget and add, edit and delete expenses
+-  check the budget and add, edit and delete expenses
 
 <br>
 
@@ -42,10 +42,12 @@ The homepage has the categories of expenses and the user can click and go to the
 
 ## Minimal Viable Product (MVP)
 
-1. Home page with option to generate daily and weekly overviews per category of expenses.
-2. Option on home page to set alerts to be activated when a specific percentage of the budget has been spent.
-3. Individual pages for each expenditure category with functionality to create, edit and delete budgets, and manage expenses (create, edit and delete expenses).
-4. Page with credits for pictures and font used for the app
+1. Home page with overview of standard budget categories
+2. Home page navbar with option to create a new category
+3. A View/Edit button for each expenditure category
+4. Functionality to create, edit and delete a budget category
+5. Functionality to manage expenses (add, edit and delete expenses)
+6. Page with credits for pictures and font used for the app
 
 <br>
 
@@ -54,13 +56,15 @@ The homepage has the categories of expenses and the user can click and go to the
 - *Page for sign up*
 - *Page for log in*
 - *Option to log out*
+- *Option to generate daily and weekly overviews per category of expenses*
+- *Option on home page to set alerts to be activated when a specific percentage of the budget has been spent*
 
 
 <br>
 
 ## Technology
 •	JavaScript
-•	React
+•	React & React Router
 •	Local storage
 •	HTML
 •	CSS
