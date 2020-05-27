@@ -62,7 +62,6 @@ class CreateCategory extends React.Component {
                       className="form-control"
                       type="number"
                       placeholder="Enter total amount"
-                      required
                       autoComplete="off"
                       name="totalBudget"
                       value={this.state.totalBudget}
