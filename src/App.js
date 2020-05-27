@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import CategoryOverview from "./components/CategoryOverview";
 import CreateCategory from "./components/CreateCategory";
 import EditCategory from "./components/EditCategory";
+import CategoryState from "./components/CategoryState"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/" component={CategoryOverview} />
         <Route exact path="/create" component={CreateCategory} />
         <Route exact path="/edit" component={EditCategory} />
+        <Route exact path="/state" component={CategoryState} />
       </Switch>
 
       <Footer />

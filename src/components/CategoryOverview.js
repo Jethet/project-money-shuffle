@@ -1,8 +1,6 @@
 import React from "react";
-import CreateCategory from "./CreateCategory";
 import StandardCategories from "./StandardCategories";
 import categoriesData from "./../categoriesData.js";
-import CategoryState from "./CategoryState"
 
 
 class CategoryOverview extends React.Component {
@@ -26,7 +24,6 @@ class CategoryOverview extends React.Component {
           );
         })
         }
-        <CategoryState />
 
       </div>
     );
