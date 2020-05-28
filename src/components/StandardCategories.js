@@ -10,11 +10,15 @@ function StandardCategories(props) {
         <li>Total amount spent: {props.category.amountSpent}</li>
         <li>Total remaining budget: {props.category.remainingBudget}</li>
         <li>Budget created on: {props.category.budgetDate}</li>
-        <button className="view-button" type="submit" >
-          <Link to="/edit">View/Edit</Link>
-        </button>
-      </ul>
 
+        <button className="category-button" onClick={props.viewCategoryFromStorage}>
+          <Link to="/view" className="link">View</Link>
+        </button>
+        <button className="category-button">
+          <Link to="/edit" className="link">Edit</Link>
+        </button>
+        
+      </ul>
       <br />
     </div>
   );

@@ -29,8 +29,32 @@ class EditCategory extends React.Component {
     }
   };
 
+  handleEdit = (e) => {
+    // Can I add EditCategory here somehow?
+  };
+
+  handleDelete = (e) => {
+    // Can I add DeleteCategory here?
+  };
+
   render() {
-    return <div></div>;
+    return (
+      <div>
+      <ul className="category-items">
+        <h6>Category: {this.props.categoryName}</h6>
+        <li>Total budget amount: {this.props.totalBudget}</li>
+        <li>Total amount spent: {this.props.amountSpent}</li>
+        <li>Total remaining budget: {this.props.remainingBudget}</li>
+        <li>Budget created on: {this.props.budgetDate}</li>
+        <button type="submit" className="category-button" onClick={this.handleEdit}>
+          Edit
+        </button>
+        <button type="submit" className="category-button" onClick={this.handleDelete}>
+          Delete
+        </button>
+      </ul>
+    </div>
+    )
   }
 }
 

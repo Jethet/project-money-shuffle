@@ -1,6 +1,7 @@
 import React from "react";
 import CreateCategory from "./CreateCategory";
-// import ViewCategory from "./ViewCategory"
+import ViewCategory from "./ViewCategory";
+import StandardCategories from "./StandardCategories";
 // import EditCategory from "./EditCategory"
 
 // CategoryState has nothing to do with the other components: it only deals with the state.
@@ -29,26 +30,38 @@ class CategoryState extends React.Component {
     });
   };
 
+  viewCategoryFromStorage = () => {
+    console.log("Find this");
+    
+    let category = this.state.categoryName;
+    if (localStorage.getItem(category) === null) {
+      console.log("Category does not exist.");
+    } else {
+      category = JSON.parse(localStorage.getItem(category));
+    }
+    console.log(category);
+  };
+
   render() {
     return (
       <div>
+        <StandardCategories viewCategoryFromStorage={this.viewCategoryFromStorage} />
         <CreateCategory
-          categoryName={this.state.categoryName}
-          totalBudget={this.state.totalBudget}
-          amountSpent={this.state.amountSpent}
-          remainingBudget={this.state.remainingBudget}
-          budgetDate={this.state.budgetDate}
+          {...this.state}
           updateState={this.updateState}
+          // categoryName={this.state.categoryName}
+          // totalBudget={this.state.totalBudget}
+          // amountSpent={this.state.amountSpent}
+          // remainingBudget={this.state.remainingBudget}
+          // budgetDate={this.state.budgetDate}
+          // updateState={this.updateState}
         />
 
-        {/* <ViewCategory
-        categoryName={this.categoryName}
-        totalBudget={this.totalBudget}
-        amountSpent={this.amountSpent}
-        remainingBudget={this.remainingBudget}
-        budgetDate={this.budgetDate}
+        <ViewCategory
+          {...this.state}
+          viewCategoryFromStorage={this.viewCategoryFromStorage}
         />
-        <EditCategory
+        {/* <EditCategory
         categoryName={this.categoryName}
         totalBudget={this.totalBudget}
         amountSpent={this.amountSpent}

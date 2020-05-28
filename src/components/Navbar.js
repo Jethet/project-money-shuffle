@@ -11,12 +11,12 @@ function Navbar() {
           </Link>
         </div>
 
-        <div id="nav-button">
-          <button className="link-button" type="submit">
-            <Link to="/create">Create category</Link>
+        <div>
+          <button className="link-create-button">
+            <Link to="/create" className="nav-link">New category</Link>
           </button>
-
         </div>
+
       </nav>
     </div>
   );

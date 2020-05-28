@@ -10,6 +10,7 @@ class CreateCategory extends React.Component {
   };
 
   handleChange = (e) => {
+    e.preventDefault()
     let { name, value } = e.target;
     this.setState({ [name]: value });
   };
@@ -112,8 +113,7 @@ class CreateCategory extends React.Component {
                 </div>
                 <button
                   type="submit"
-                  className="btn"
-                  style={{ backgroundColor: "rgb(48, 192, 12)", color: "black" }}
+                  className="category-button"
                 >
                   Create new category
                 </button>
