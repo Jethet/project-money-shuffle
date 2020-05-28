@@ -2,6 +2,7 @@ import React from "react";
 import CreateCategory from "./CreateCategory";
 import ViewCategory from "./ViewCategory";
 import StandardCategories from "./StandardCategories";
+import CategoryOverview from "./CategoryOverview";
 // import EditCategory from "./EditCategory"
 
 // CategoryState has nothing to do with the other components: it only deals with the state.
@@ -30,22 +31,11 @@ class CategoryState extends React.Component {
     });
   };
 
-  viewCategoryFromStorage = () => {
-    console.log("Find this");
-    
-    let category = this.state.categoryName;
-    if (localStorage.getItem(category) === null) {
-      console.log("Category does not exist.");
-    } else {
-      category = JSON.parse(localStorage.getItem(category));
-    }
-    console.log(category);
-  };
-
   render() {
     return (
       <div>
-        <StandardCategories viewCategoryFromStorage={this.viewCategoryFromStorage} />
+        <StandardCategories {...this.state}/>
+        <CategoryOverview {...this.state} />
         <CreateCategory
           {...this.state}
           updateState={this.updateState}
@@ -59,7 +49,6 @@ class CategoryState extends React.Component {
 
         <ViewCategory
           {...this.state}
-          viewCategoryFromStorage={this.viewCategoryFromStorage}
         />
         {/* <EditCategory
         categoryName={this.categoryName}

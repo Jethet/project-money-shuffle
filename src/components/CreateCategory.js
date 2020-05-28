@@ -25,7 +25,8 @@ class CreateCategory extends React.Component {
       localStorage.setItem(categoryName, JSON.stringify({ categoryName, totalBudget, amountSpent, remainingBudget, budgetDate }));
     } else {
       alert("This category name already exists.");
-    }
+    }    
+
     // This is the created category sent to the CategoryState (component responsible for setting state)
     this.props.updateState(categoryName, totalBudget, amountSpent, remainingBudget, budgetDate)
   };

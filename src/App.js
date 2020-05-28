@@ -17,7 +17,7 @@ function App() {
 
       <Switch>
         <Route exact path="/" component={CategoryOverview} />
-        {/* <Route exact path="/create" component={CreateCategory} /> */}
+        <Route exact path="/create" component={CreateCategory} />
         <Route exact path="/view" component={ViewCategory} />
         {/* <Route exact path="/edit" component={EditCategory} /> */}
 
