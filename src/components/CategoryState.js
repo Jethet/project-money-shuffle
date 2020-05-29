@@ -13,43 +13,51 @@ class CategoryState extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      categoryName: "",
-      totalBudget: "",
-      amountSpent: "",
-      remainingBudget: "",
-      budgetDate: "",
+      oneCategory: {
+        categoryName: "",
+        totalBudget: "",
+        amountSpent: "",
+        remainingBudget: "",
+        budgetDate: "",
+      },
+      categoryList: [],
     };
   }
 
   updateState = (categoryName, totalBudget, amountSpent, remainingBudget, budgetDate) => {
     this.setState({
-      categoryName: categoryName,
-      totalBudget: totalBudget,
-      amountSpent: amountSpent,
-      remainingBudget: remainingBudget,
-      budgetDate: budgetDate,
+      oneCategory: {
+        categoryName: categoryName,
+        totalBudget: totalBudget,
+        amountSpent: amountSpent,
+        remainingBudget: remainingBudget,
+        budgetDate: budgetDate,
+      },
     });
+  };
+
+  addNewCategory = (e) => {
+    let categories = { ...this.state.categoryList };
+    const { oneCategory } = e.target;
+    categories.push(oneCategory);
+    this.setState({ categoryList: categories });
+
+    console.log(this.state.categoryList);
   };
 
   render() {
     return (
       <div>
-        <StandardCategories {...this.state}/>
-        <CategoryOverview {...this.state} />
+        {/* <StandardCategories {...this.state}/> */}
+        <CategoryOverview {...this.state} categoryList={this.state.categoryList} />
+
         <CreateCategory
           {...this.state}
           updateState={this.updateState}
-          // categoryName={this.state.categoryName}
-          // totalBudget={this.state.totalBudget}
-          // amountSpent={this.state.amountSpent}
-          // remainingBudget={this.state.remainingBudget}
-          // budgetDate={this.state.budgetDate}
-          // updateState={this.updateState}
+          addNewCategory={this.addNewCategory}
         />
 
-        <ViewCategory
-          {...this.state}
-        />
+        <ViewCategory {...this.state} />
         {/* <EditCategory
         categoryName={this.categoryName}
         totalBudget={this.totalBudget}

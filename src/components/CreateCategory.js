@@ -1,4 +1,5 @@
 import React from "react";
+import CategoryState from "./CategoryState"
 
 class CreateCategory extends React.Component {
   state = {
@@ -112,7 +113,7 @@ class CreateCategory extends React.Component {
                     />
                   </label>
                 </div>
-                <button
+                <button onClick={this.props.addNewCategory}
                   type="submit"
                   className="category-button"
                 >
