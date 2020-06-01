@@ -52,7 +52,7 @@ class CategoryState extends React.Component {
         <CategoryOverview {...this.state} categoryList={this.state.categoryList} />
 
         <CreateCategory
-          {...this.state}
+          // {...this.state}
           updateState={this.updateState}
           addNewCategory={this.addNewCategory}
         />

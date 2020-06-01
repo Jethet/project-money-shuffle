@@ -29,7 +29,7 @@ class CategoryOverview extends React.Component {
   render() {
     return (
       <div>
-        {/* {categoriesData.map((category) => {
+        {categoriesData.map((category) => {
           return (
             <StandardCategories
               key={category.categoryName}
@@ -37,7 +37,7 @@ class CategoryOverview extends React.Component {
               getCategoryFromStorage={this.getCategoryFromStorage}
             />
           );
-        })} */}
+        })}
         {this.props.categoryList}
       </div>
     );

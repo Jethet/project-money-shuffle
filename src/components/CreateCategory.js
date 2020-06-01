@@ -10,6 +10,10 @@ class CreateCategory extends React.Component {
     budgetDate: "",
   };
 
+  componentDidMount() {
+    console.log(this.props)
+  }
+
   handleChange = (e) => {
     e.preventDefault()
     let { name, value } = e.target;
@@ -27,7 +31,7 @@ class CreateCategory extends React.Component {
     } else {
       alert("This category name already exists.");
     }    
-
+    console.log(this.props)
     // This is the created category sent to the CategoryState (component responsible for setting state)
     this.props.updateState(categoryName, totalBudget, amountSpent, remainingBudget, budgetDate)
   };

@@ -19,7 +19,7 @@ function App() {
         <Route exact path="/" component={CategoryOverview} />
         <Route exact path="/create" component={CreateCategory} />
         <Route exact path="/view" component={ViewCategory} />
-        {/* <Route exact path="/edit" component={EditCategory} /> */}
+        <Route exact path="/edit" component={EditCategory} />
 
         <Route exact path="/state" component={CategoryState} />
       </Switch>

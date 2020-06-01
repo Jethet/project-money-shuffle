@@ -13,7 +13,7 @@ function Navbar() {
 
         <div>
           <button className="link-create-button">
-            <Link to="/create" className="nav-link">New category</Link>
+            <Link to="/create" className="nav-link">Create category</Link>
           </button>
         </div>
 
