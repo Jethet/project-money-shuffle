@@ -80,6 +80,7 @@ input:invalid {
   border-radius: 5px;
   margin-top: 5px;
   margin-right: 5px;
+  transition-duration: 0.3s;
 }
 
 .category-button:hover {
